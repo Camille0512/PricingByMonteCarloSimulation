@@ -1,0 +1,6 @@
+# Exclude files produced by sbt
+.bsp/
+target/
+.DS_Store
+.idea/
+project/
