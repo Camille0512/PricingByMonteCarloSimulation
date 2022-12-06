@@ -23,7 +23,9 @@ object PricingElements {
                horizon: Double,
                timeSteps: Int,
                r: Double
-             ): PricingElm = 
+             ): PricingElm =
+    // TODO: Can modify the case class, using sealed trait -> will be more efficient and can check the inputs
+    // TODO: Make use of enums instead of using string.
       Map(
         "S0" -> S0,
         "K" -> K,

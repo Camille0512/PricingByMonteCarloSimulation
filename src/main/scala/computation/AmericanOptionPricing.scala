@@ -7,6 +7,7 @@ import math._
 // Third party packages
 import breeze.linalg.{DenseMatrix, DenseVector}
 
+// TODO: Try to use concurrency
 /**
  * American option pricing using the pioneer method to decide the exercise boundary.
  *
@@ -65,6 +66,7 @@ class AmericanOptionPricing(
     exerciseValue >= holdingValue
   }
 
+  // TODO: Need to be improved, such as not passing in a map with matrix as value
   /**
    * Sort the matrix using quick sort according to the last column elements of the matrix, from small to large.
    *

@@ -44,7 +44,7 @@ object Main {
     println("pricingMethod: " + pricingMethod)
     println("\n")
 
-    if (!Array("call", "put").contains(optionType)) throw NoSuchElementException
+    if (!Array("call", "put").contains(optionType)) throw new Exception("Please input 'call' or 'put' instead.")
 
     if (pricingMethod == "American" && simTimes < 6_000) {
       val americanOption = new AmericanOptionPricing(pElm, optionType, simTimes)
@@ -58,7 +58,7 @@ object Main {
       val lookBackOption = new LookBackOption(pElm, optionType, simTimes)
       println("[" + simTimes + "] The Look Back" + optionType + " option price is: " + lookBackOption.pricing + "\n")
     } else {
-      throw new NoSuchElementException
+      throw new Exception("The option type does not exist yet.")
     }
   }
 }

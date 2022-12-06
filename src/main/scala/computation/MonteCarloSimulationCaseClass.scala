@@ -8,6 +8,7 @@ import org.apache.commons.math3.random.MersenneTwister
 import breeze.stats.distributions._
 import breeze.linalg.{DenseMatrix, DenseVector}
 
+// TODO: Try to use concurrency
 /**
  *
  * @param S0 The underlying asset price at time t=0 (current), initial spot level.
